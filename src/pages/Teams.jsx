@@ -2,6 +2,8 @@ import { get } from "../utils/conexionAPI";
 import { useState, useEffect } from "react";
 import { Conferences } from "../components/Conferences";
 
+import "./Team.css";
+
 export const Teams = () => {
     const [ teams, setTeams ] = useState([]);
     const [eastTeams, setEastTeams] = useState([]);
@@ -23,11 +25,10 @@ export const Teams = () => {
     }, []);
 
     return (
-        <>
-        <h2>Teams NBA</h2>
-          <Conferences conference="East" teams={eastTeams}/>
-          <Conferences conference="West" teams={westTeams}/>
-        </>
+        <div className="teams-container">
+            <h2 className="title">Teams NBA</h2>
+            <Conferences conference="East" teams={eastTeams}/>
+            <Conferences conference="West" teams={westTeams}/>
+        </div>
     );
-
 }

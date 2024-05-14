@@ -1,0 +1,12 @@
+.player-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.player-name {
+    font-size: 1.2rem;
+    color: #032f4f;
+    margin-bottom: 10px;
+}
