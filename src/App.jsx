@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Teams } from "./pages/Teams";
 import { TeamCard } from "./components/TeamCard";
-import { Stats } from "./components/Stats";
+import { PlayerDetail } from "./components/PlayerDetail";
 
 import './App.css'
 
@@ -13,7 +13,7 @@ export const App = () => {
         <Route path="/" element= { <Home/> }/>
         <Route path="/teams" element= { <Teams/> }/>
         <Route path="/teams/:teamId" element= { <TeamCard/> }/>
-        <Route path="/stats" element= { <Stats/>}/>
+        <Route path="/players/:playerId" element= { <PlayerDetail/>}/>
       </Routes>
     </BrowserRouter>
   )

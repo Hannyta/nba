@@ -1,14 +1,14 @@
 import { get } from "../utils/conexionAPI";
 import { useState, useEffect } from "react";
 
-export const Stats = ({team , players}) => {
+export const PlayerDetail = () => {
 
-    const [stats, setStats ] = useState([]);
+    const [players, setStats ] = useState([]);
     const [statsTeam, setStatsTeam] = useState(null);
     const [statsPlayer, setStatsPlayer] = useState(null);
 
     useEffect(() => {
-        get(`/stats`)
+        get(`/season_averages?season=2023&player_ids[]=262`)
         .then((data) => {
             setStats(data);
         });

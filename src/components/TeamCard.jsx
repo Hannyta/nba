@@ -2,7 +2,6 @@ import { get } from "../utils/conexionAPI";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PlayerCard } from "./PlayersCard";
-import { Stats } from "./Stats";
 
 import "./TeamCard.css";
 
@@ -27,7 +26,8 @@ export const TeamCard = () => {
         });
         
     }, [teamId]);
-    
+   
+
     if (!team) {
         return <div>Team not found.</div>;
     }
@@ -47,7 +47,6 @@ export const TeamCard = () => {
                 <PlayerCard key={index} player={player} />
             ))}
         </div>
-            <Stats team={team} players={players}/>
         </>
     );
 };

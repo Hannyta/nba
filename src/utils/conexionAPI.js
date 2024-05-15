@@ -1,3 +1,34 @@
+import atlanta from "../assets/logoTeams/atlanta.png";
+import boston from "../assets/logoTeams/Boston.png";
+import brooklyn from "../assets/logoTeams/Brooklyn.png";
+import charlotte from "../assets/logoTeams/Charlotte.png";
+import Bulls from "../assets/logoTeams/Bulls.png";
+import Cavaliers from "../assets/logoTeams/Cavaliers.png";
+import Dallas from "../assets/logoTeams/Dallas.png";
+import Denver from "../assets/logoTeams/Denver.png";
+import Pistons from "../assets/logoTeams/Pistons.png";
+import Golden from "../assets/logoTeams/Golden.png";
+import Houston from "../assets/logoTeams/Houston.png";
+import Indiana from "../assets/logoTeams/Indiana.png";
+import Clippers from "../assets/logoTeams/Clippers.png";
+import Lakers from "../assets/logoTeams/Lakers.png";
+import Memphis from "../assets/logoTeams/Memphis.png";
+import Miami from "../assets/logoTeams/Miami.png";
+import Milwaukee from "../assets/logoTeams/Milwaukee.png";
+import Minnesota from "../assets/logoTeams/Minnesota.png";
+import Pelicans from "../assets/logoTeams/Pelicans.png";
+import Knicks from "../assets/logoTeams/Knicks.png";
+import Oklahoma from "../assets/logoTeams/Oklahoma.png";
+import Magic from "../assets/logoTeams/Magic.png";
+import Phila from "../assets/logoTeams/Phila.png";
+import Phoenix from "../assets/logoTeams/Phoenix.png";
+import Portland from "../assets/logoTeams/Portland.png";
+import Sacramento from "../assets/logoTeams/Sacramento.png";
+import Spurs from "../assets/logoTeams/Spurs.png";
+import Raptors from "../assets/logoTeams/Raptors.png";
+import Utah from "../assets/logoTeams/Utah.png";
+import Washington from "../assets/logoTeams/Washington.png";
+
 const API = "https://api.balldontlie.io/v1";
 
 export const get = (path) => {
@@ -24,7 +55,8 @@ const mockTeams = {
         "city": "Atlanta",
         "name": "Hawks",
         "full_name": "Atlanta Hawks",
-        "abbreviation": "ATL"
+        "abbreviation": "ATL",
+        "logo": atlanta
       },
       {
         "id": 2,
@@ -33,7 +65,8 @@ const mockTeams = {
         "city": "Boston",
         "name": "Celtics",
         "full_name": "Boston Celtics",
-        "abbreviation": "BOS"
+        "abbreviation": "BOS", 
+        "logo": boston
       },
       {
         "id": 3,
@@ -42,7 +75,8 @@ const mockTeams = {
         "city": "Brooklyn",
         "name": "Nets",
         "full_name": "Brooklyn Nets",
-        "abbreviation": "BKN"
+        "abbreviation": "BKN",
+        "logo": brooklyn
       },
       {
         "id": 4,
@@ -51,7 +85,9 @@ const mockTeams = {
         "city": "Charlotte",
         "name": "Hornets",
         "full_name": "Charlotte Hornets",
-        "abbreviation": "CHA"
+        "abbreviation": "CHA",
+        "logo": charlotte
+
       },
       {
         "id": 5,
@@ -60,7 +96,8 @@ const mockTeams = {
         "city": "Chicago",
         "name": "Bulls",
         "full_name": "Chicago Bulls",
-        "abbreviation": "CHI"
+        "abbreviation": "CHI",
+        "logo": Bulls
       },
       {
         "id": 6,
@@ -69,7 +106,8 @@ const mockTeams = {
         "city": "Cleveland",
         "name": "Cavaliers",
         "full_name": "Cleveland Cavaliers",
-        "abbreviation": "CLE"
+        "abbreviation": "CLE",
+        "logo": Cavaliers
       },
       {
         "id": 7,
@@ -78,7 +116,8 @@ const mockTeams = {
         "city": "Dallas",
         "name": "Mavericks",
         "full_name": "Dallas Mavericks",
-        "abbreviation": "DAL"
+        "abbreviation": "DAL",
+        "logo": Dallas
       },
       {
         "id": 8,
@@ -87,7 +126,8 @@ const mockTeams = {
         "city": "Denver",
         "name": "Nuggets",
         "full_name": "Denver Nuggets",
-        "abbreviation": "DEN"
+        "abbreviation": "DEN",
+        "logo": Denver
       },
       {
         "id": 9,
@@ -96,7 +136,8 @@ const mockTeams = {
         "city": "Detroit",
         "name": "Pistons",
         "full_name": "Detroit Pistons",
-        "abbreviation": "DET"
+        "abbreviation": "DET",
+        "logo": Pistons
       },
       {
         "id": 10,
@@ -105,7 +146,8 @@ const mockTeams = {
         "city": "Golden State",
         "name": "Warriors",
         "full_name": "Golden State Warriors",
-        "abbreviation": "GSW"
+        "abbreviation": "GSW",
+        "logo": Golden
       },
       {
         "id": 11,
@@ -114,7 +156,8 @@ const mockTeams = {
         "city": "Houston",
         "name": "Rockets",
         "full_name": "Houston Rockets",
-        "abbreviation": "HOU"
+        "abbreviation": "HOU",
+        "logo": Houston
       },
       {
         "id": 12,
@@ -123,7 +166,8 @@ const mockTeams = {
         "city": "Indiana",
         "name": "Pacers",
         "full_name": "Indiana Pacers",
-        "abbreviation": "IND"
+        "abbreviation": "IND",
+        "logo": Indiana
       },
       {
         "id": 13,
@@ -132,7 +176,8 @@ const mockTeams = {
         "city": "LA",
         "name": "Clippers",
         "full_name": "LA Clippers",
-        "abbreviation": "LAC"
+        "abbreviation": "LAC",
+        "logo": Clippers
       },
       {
         "id": 14,
@@ -141,7 +186,8 @@ const mockTeams = {
         "city": "Los Angeles",
         "name": "Lakers",
         "full_name": "Los Angeles Lakers",
-        "abbreviation": "LAL"
+        "abbreviation": "LAL",
+        "logo": Lakers
       },
       {
         "id": 15,
@@ -150,7 +196,8 @@ const mockTeams = {
         "city": "Memphis",
         "name": "Grizzlies",
         "full_name": "Memphis Grizzlies",
-        "abbreviation": "MEM"
+        "abbreviation": "MEM",
+        "logo": Memphis
       },
       {
         "id": 16,
@@ -159,7 +206,8 @@ const mockTeams = {
         "city": "Miami",
         "name": "Heat",
         "full_name": "Miami Heat",
-        "abbreviation": "MIA"
+        "abbreviation": "MIA",
+        "logo": Miami
       },
       {
         "id": 17,
@@ -168,7 +216,8 @@ const mockTeams = {
         "city": "Milwaukee",
         "name": "Bucks",
         "full_name": "Milwaukee Bucks",
-        "abbreviation": "MIL"
+        "abbreviation": "MIL",
+        "logo": Milwaukee
       },
       {
         "id": 18,
@@ -177,7 +226,8 @@ const mockTeams = {
         "city": "Minnesota",
         "name": "Timberwolves",
         "full_name": "Minnesota Timberwolves",
-        "abbreviation": "MIN"
+        "abbreviation": "MIN",
+        "logo": Minnesota
       },
       {
         "id": 19,
@@ -186,7 +236,8 @@ const mockTeams = {
         "city": "New Orleans",
         "name": "Pelicans",
         "full_name": "New Orleans Pelicans",
-        "abbreviation": "NOP"
+        "abbreviation": "NOP",
+        "logo": Pelicans
       },
       {
         "id": 20,
@@ -195,7 +246,8 @@ const mockTeams = {
         "city": "New York",
         "name": "Knicks",
         "full_name": "New York Knicks",
-        "abbreviation": "NYK"
+        "abbreviation": "NYK",
+        "logo": Knicks
       },
       {
         "id": 21,
@@ -204,7 +256,8 @@ const mockTeams = {
         "city": "Oklahoma City",
         "name": "Thunder",
         "full_name": "Oklahoma City Thunder",
-        "abbreviation": "OKC"
+        "abbreviation": "OKC",
+        "logo": Oklahoma
       },
       {
         "id": 22,
@@ -213,7 +266,8 @@ const mockTeams = {
         "city": "Orlando",
         "name": "Magic",
         "full_name": "Orlando Magic",
-        "abbreviation": "ORL"
+        "abbreviation": "ORL",
+        "logo": Magic
       },
       {
         "id": 23,
@@ -222,7 +276,8 @@ const mockTeams = {
         "city": "Philadelphia",
         "name": "76ers",
         "full_name": "Philadelphia 76ers",
-        "abbreviation": "PHI"
+        "abbreviation": "PHI",
+        "logo": Phila
       },
       {
         "id": 24,
@@ -231,7 +286,8 @@ const mockTeams = {
         "city": "Phoenix",
         "name": "Suns",
         "full_name": "Phoenix Suns",
-        "abbreviation": "PHX"
+        "abbreviation": "PHX",
+        "logo": Phoenix
       },
       {
         "id": 25,
@@ -240,7 +296,8 @@ const mockTeams = {
         "city": "Portland",
         "name": "Trail Blazers",
         "full_name": "Portland Trail Blazers",
-        "abbreviation": "POR"
+        "abbreviation": "POR",
+        "logo": Portland
       },
       {
         "id": 26,
@@ -249,7 +306,8 @@ const mockTeams = {
         "city": "Sacramento",
         "name": "Kings",
         "full_name": "Sacramento Kings",
-        "abbreviation": "SAC"
+        "abbreviation": "SAC",
+        "logo": Sacramento
       },
       {
         "id": 27,
@@ -258,7 +316,8 @@ const mockTeams = {
         "city": "San Antonio",
         "name": "Spurs",
         "full_name": "San Antonio Spurs",
-        "abbreviation": "SAS"
+        "abbreviation": "SAS",
+        "logo": Spurs
       },
       {
         "id": 28,
@@ -267,7 +326,8 @@ const mockTeams = {
         "city": "Toronto",
         "name": "Raptors",
         "full_name": "Toronto Raptors",
-        "abbreviation": "TOR"
+        "abbreviation": "TOR",
+        "logo": Raptors
       },
       {
         "id": 29,
@@ -276,7 +336,8 @@ const mockTeams = {
         "city": "Utah",
         "name": "Jazz",
         "full_name": "Utah Jazz",
-        "abbreviation": "UTA"
+        "abbreviation": "UTA",
+        "logo": Utah
       },
       {
         "id": 30,
@@ -285,7 +346,9 @@ const mockTeams = {
         "city": "Washington",
         "name": "Wizards",
         "full_name": "Washington Wizards",
-        "abbreviation": "WAS"
+        "abbreviation": "WAS",
+        "logo": Washington
+
       },
       {
         "id": 37,
