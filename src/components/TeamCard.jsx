@@ -9,7 +9,18 @@ export const TeamCard = () => {
 
     const [team, setTeam ] = useState(null);
     const [players, setPlayers] = useState(null);
+    const [thisTeam, setThisTeam] = useState(null);
     const { teamId } = useParams();
+
+    useEffect(() => {
+        // get("/teams").then((data) => {
+            get("mockTeams").then((data) => {
+                const allTeamsData = data.data;
+                setThisTeam(allTeamsData.find(el => el.id === parseInt(teamId)));
+                console.log(thisTeam);
+                setTeam(thisTeam); 
+            });
+    }, [teamId]);
 
     useEffect(() => {
         get(`/teams/${teamId}`)
@@ -31,12 +42,11 @@ export const TeamCard = () => {
     if (!team) {
         return <div>Team not found.</div>;
     }
-    console.log(team)
-    console.log(players);
-
+    
     return (
         <>
         <div className="container CardTeam">
+            <img src={thisTeam.logo} alt="logo" />
             <h2>{team.full_name}</h2>
             <p><strong>City:</strong> {team.city}</p>
             <p><strong>Conference:</strong> {team.conference}</p>
