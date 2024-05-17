@@ -3,25 +3,33 @@ import { IoSearchSharp } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import { MdDarkMode } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({theme, setTheme}) => {
+
+  const toggleMode = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  }
+
   return (
     <div className="navbar">
-        <img src= {logo} alt="logo_Run And Gun" className="logo"/>
+        <img src={logo} alt="logo_Run And Gun" className="logo"/>
 
         <ul>
-            <li>Home</li>
-            <li>Teams</li>
-            <li>Players</li>
-            <li>Stats</li>
+          <NavLink className="nav-link" to="/" exact>Home</NavLink>
+          <NavLink className="nav-link" to="/teams" exact>Equipos</NavLink>
         </ul>
-
+        
         <div className="search-box">
             <input type="text" placeholder="Search"/>
             <IoSearchSharp className="search-icon"/>
         </div>
+        
+        {theme === "light" ? 
+          <MdDarkMode onClick={toggleMode} className="toggle-icon" /> : 
+          <IoMdSunny onClick={toggleMode} className="toggle-icon" />
+        }
 
-        <MdDarkMode  className="toggle-icon"/>
     </div>
   )
 }

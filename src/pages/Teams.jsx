@@ -26,7 +26,7 @@ export const Teams = () => {
 
     return (
         <div className="teams-container">
-            <h2 className="title">Teams NBA</h2>
+            <h2 className="title">Equipos NBA</h2>
             <Conferences conference="East" teams={eastTeams}/>
             <Conferences conference="West" teams={westTeams}/>
         </div>

@@ -3,11 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: #cadaf0;
+    padding: 15px 7%;
+    transition: 0.05s;
 }
 
 .logo {
-    width: 160px;
+    width: 120px;
     cursor: pointer;
 }
 
@@ -17,15 +19,16 @@ ul {
     text-align: center;
 }
 
-li {
+.nav-link {
     display: inline-block;
     margin: 10px 20px;
     font-size: 18px;
     cursor: pointer;
+    color: #222;
 }
 
 .toggle-icon {
-    width: 50px;
+    width: 80px;
     cursor: pointer;
     margin-left: 40px;
 }
@@ -33,7 +36,7 @@ li {
 .search-box {
     display: flex;
     align-items: center;
-    background: #242424;
+    background: #99500b;
     padding: 10px 20px;
     border-radius: 50px;
 }
@@ -55,4 +58,29 @@ li {
 .search-icon{
     width: 20px;
     cursor: pointer;
+}
+
+.dark .navbar {
+    background: #213547;
+    color: #fff;
+}
+
+.dark .nav-link {
+    color: #cadaf0;
+}
+
+.dark .search-box{
+    background: #cadaf0;
+}
+
+.dark .search-box input{
+    color: #222;
+}
+.dark .search-box input::placeholder {
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
 }

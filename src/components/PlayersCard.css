@@ -1,12 +1,25 @@
 .player-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .player-name {
     font-size: 1.2rem;
     color: #032f4f;
     margin-bottom: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.Ptexto {
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
 }

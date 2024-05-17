@@ -1,7 +1,9 @@
 .CardTeam {
-    border: 1px solid #ccc;
+    justify-content: center;
+    margin-top: 20px;
+    border: 1px solid #818080;
     padding: 20px;
-    width: 700px;
+    width: 80%;
     border-radius: 10px;
     margin-bottom: 20px;
     background: #032f4f;
@@ -10,6 +12,7 @@
 
 .players {
     display: grid;
+    width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }

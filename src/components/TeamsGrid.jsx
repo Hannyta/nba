@@ -12,12 +12,16 @@ export const TeamsGrid = ({ teams }) => {
                     <h5 className="division-title">{division} Division</h5>
                     <ul>
                         {teams.filter(team => team.division === division).map(team => (
-                            <li key={team.id}>
-                                <Link to={`/teams/${team.id}`}  className="linkTeam" >{team.full_name}</Link>
-                                <p>
-                                    <strong>City: </strong>{team.city}
-                                </p>
-                                <img src={team.logo} alt="logo" />
+                            <li className="linkTeam" key={team.id}>
+                                <Link to={`/teams/${team.id}`}>
+                                    <div>
+                                    <h3 className="nameTeam">{team.full_name}</h3>
+                                        <p>
+                                            <strong>Ciudad: </strong>{team.city}
+                                        </p>
+                                        <img src={team.logo} alt="logo" />
+                                    </div>
+                                </Link>
                             </li>
                         ))}                     
                     </ul>
