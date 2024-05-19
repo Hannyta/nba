@@ -2,43 +2,37 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
-    border: 2px solid #032f4f;
+    border: 2px solid var(--blue-1000);
 }
 
 .division {
     font-size: 1.2em;
     margin: 10px;
-
 }
 
 .division-title {
     display: grid;
     font-weight: bold;
     line-height: 30px;
-    background-color: #032f4f;
-    color: #fff;
+    background-color: var(--blue-1000);
+    color: var(--primary-color-text);
     margin: 0;
     font-weight: 500;
 }
 
-.teams-list {
-    display: grid;
-    gap: 10px;
-}
-
 .linkTeam {
-    margin: 30px 0;
-    padding: 2px;
-    border: 1px solid #9ecbeb;
+    margin: 40px;
+    padding: 10px;
+    border: 1px solid var(--blue-300);
     border-radius: 5%;
 }
 
 .nameTeam {
-    color: #032f4f;
+    color: var(--blue-1000);
 }
 
 p {
-    color: #222;
+    color: var(--dark-0);
 }
 
 .dark .linkTeam {
@@ -46,9 +40,9 @@ p {
 }
 
 .dark p {
-   color: #2f2f36;
+   color: var(--bluegray-400);
 }
 
 .dark .nameTeam {
-    color: #4e6072;
+    color: var(--blue-800);
 }

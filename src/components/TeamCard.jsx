@@ -44,19 +44,19 @@ export const TeamCard = () => {
     }
     
     return (
-        <>
-        <div className="container CardTeam">
-            <img src={thisTeam.logo} alt="logo" />
-            <h2>{team.full_name}</h2>
-            <p><strong>City:</strong> {team.city}</p>
-            <p><strong>Conference:</strong> {team.conference}</p>
-            <p><strong>Division:</strong> {team.division}</p>
+        <div className="container">
+            <div className="CardTeam">
+                <img src={thisTeam.logo} alt="logo" />
+                <h2>{team.full_name}</h2>
+                <p><strong>City:</strong> {team.city}</p>
+                <p><strong>Conference:</strong> {team.conference}</p>
+                <p><strong>Division:</strong> {team.division}</p>
+            </div>
+            <div className="players">
+                {players && players.map((player, index) => (
+                    <PlayerCard key={index} player={player} />
+                ))}
+            </div>
         </div>
-        <div className="container players">
-            {players && players.map((player, index) => (
-                <PlayerCard key={index} player={player} />
-            ))}
-        </div>
-        </>
     );
 };

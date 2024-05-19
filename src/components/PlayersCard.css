@@ -4,17 +4,21 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--blue-200);
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .player-name {
     font-size: 1.2rem;
-    color: #032f4f;
+    color: var(--blue-1000);
     margin-bottom: 10px;
     justify-content: center;
     align-content: center;
+}
+
+strong {
+    color: var(--blue-700);
 }
 
 .Ptexto {
@@ -22,4 +26,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
+    color: var(--blue-1000);
+}
+
+.dark .player-name{
+    color: var(--blue-200);
+}
+
+.dark .PTexto {
+    color: var(--blue-200);
+}
+
+.dark strong {
+    color: var(--indigo-400);
 }

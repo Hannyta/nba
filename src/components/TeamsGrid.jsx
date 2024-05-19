@@ -14,7 +14,7 @@ export const TeamsGrid = ({ teams }) => {
                         {teams.filter(team => team.division === division).map(team => (
                             <li className="linkTeam" key={team.id}>
                                 <Link to={`/teams/${team.id}`}>
-                                    <div>
+                                    <div className="containerTeam"> 
                                     <h3 className="nameTeam">{team.full_name}</h3>
                                         <p>
                                             <strong>Ciudad: </strong>{team.city}
