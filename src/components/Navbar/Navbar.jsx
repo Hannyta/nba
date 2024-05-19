@@ -1,6 +1,6 @@
 import "./Navbar.css"
 import { IoSearchSharp } from "react-icons/io5";
-import logo from "../../assets/logo.png";
+import logo from "/assets/logo.png";
 import { MdDarkMode } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { NavLink } from "react-router-dom";
@@ -16,8 +16,8 @@ export const Navbar = ({theme, setTheme}) => {
         <img src={logo} alt="logo_Run And Gun" className="logo"/>
 
         <ul>
-          <NavLink className="nav-link" to="/" exact>Home</NavLink>
-          <NavLink className="nav-link" to="/teams" exact>Equipos</NavLink>
+          <NavLink className="nav-link" to="/">Home</NavLink>
+          <NavLink className="nav-link" to="/teams">Equipos</NavLink>
         </ul>
         
         <div className="search-box">

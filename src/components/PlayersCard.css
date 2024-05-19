@@ -17,10 +17,6 @@
     align-content: center;
 }
 
-strong {
-    color: var(--blue-700);
-}
-
 .Ptexto {
     margin: 5px 0;
     display: grid;
@@ -35,8 +31,4 @@ strong {
 
 .dark .PTexto {
     color: var(--blue-200);
-}
-
-.dark strong {
-    color: var(--indigo-400);
 }

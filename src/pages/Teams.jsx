@@ -10,8 +10,8 @@ export const Teams = () => {
     const [westTeams, setWestTeams] = useState([]);
 
     useEffect(() => {
-        // get("/teams").then((data) => {
-        get("mockTeams").then((data) => {
+        get("/teams").then((data) => {
+        //get("mockTeams").then((data) => {
             const allTeams = data.data;
             console.log(allTeams);
             setTeams(allTeams);

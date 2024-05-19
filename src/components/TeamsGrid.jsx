@@ -19,11 +19,12 @@ export const TeamsGrid = ({ teams }) => {
                                         <p>
                                             <strong>Ciudad: </strong>{team.city}
                                         </p>
-                                        <img src={team.logo} alt="logo" />
+                                        <img src={`/assets/logoTeams/${team.name}.png`} alt="logo"/>
                                     </div>
                                 </Link>
                             </li>
-                        ))}                     
+                        )
+                    )}                
                     </ul>
                 </div>
             ))}

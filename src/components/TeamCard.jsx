@@ -13,8 +13,7 @@ export const TeamCard = () => {
     const { teamId } = useParams();
 
     useEffect(() => {
-        // get("/teams").then((data) => {
-            get("mockTeams").then((data) => {
+            get("/teams").then((data) => {
                 const allTeamsData = data.data;
                 setThisTeam(allTeamsData.find(el => el.id === parseInt(teamId)));
                 console.log(thisTeam);
@@ -46,7 +45,7 @@ export const TeamCard = () => {
     return (
         <div className="container">
             <div className="CardTeam">
-                <img src={thisTeam.logo} alt="logo" />
+                <img src={`/assets/logoTeams/${team.name}.png`} alt="logo"/>
                 <h2>{team.full_name}</h2>
                 <p><strong>City:</strong> {team.city}</p>
                 <p><strong>Conference:</strong> {team.conference}</p>
