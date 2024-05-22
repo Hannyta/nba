@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
 
+
 import "./PlayersCard.css";
 
 export const PlayerCard = ({player}) => {
-
 
     return (
         <div className="playerCard">

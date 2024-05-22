@@ -18,6 +18,7 @@ export const Navbar = ({theme, setTheme}) => {
         <ul>
           <NavLink className="nav-link" to="/">Home</NavLink>
           <NavLink className="nav-link" to="/teams">Equipos</NavLink>
+          <NavLink className="nav-link" to="/players">Jugadores</NavLink>
         </ul>
         
         <div className="search-box">

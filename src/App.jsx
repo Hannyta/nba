@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 
 import './App.css'
+import { Players } from "./pages/Players";
 
 export const App = () => {
 
@@ -25,6 +26,7 @@ export const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/teams/:teamId" element={<TeamCard />} />
+          <Route path="/players" element={<Players />} />
           <Route path="/player/:playerId" element={<PlayerDetail />} />
         </Routes>
       </div>

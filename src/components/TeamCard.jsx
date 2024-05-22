@@ -16,8 +16,6 @@ export const TeamCard = () => {
             get("/teams").then((data) => {
                 const allTeamsData = data.data;
                 setThisTeam(allTeamsData.find(el => el.id === parseInt(teamId)));
-                console.log(thisTeam);
-                setTeam(thisTeam); 
             });
     }, [teamId]);
 
