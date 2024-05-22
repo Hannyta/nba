@@ -1,14 +1,17 @@
-import {Link} from "react-router-dom";
-
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./PlayersCard.css";
 
-export const PlayerCard = ({player}) => {
+export const PlayerCard = ({ player }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/player/${player.id}`, { state: { player } });
+    };
 
     return (
-        <div className="playerCard">
-            <h5 className="player-name"> 
-            <Link to={`/player/${player.id}`}>{`${player.first_name} ${player.last_name}`}</Link> </h5>
+        <div className="playerCard" onClick={handleClick}>
+            <h5 className="player-name">{`${player.first_name} ${player.last_name}`}</h5>
             <div className="Ptexto">
                 <p><strong>Posición: </strong>{player.position}</p>
                 <p><strong>Numero de camiseta: </strong>{player.jersey_number}</p>
@@ -17,4 +20,4 @@ export const PlayerCard = ({player}) => {
             </div>
         </div>  
     );
-} 
+};

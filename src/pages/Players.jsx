@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { get } from "../utils/conexionAPI";
-import { PlayerDetail } from "../components/PlayerDetail";
+import "./Player.css"
 
 export const Players = () => {
     const [players, setPlayers] = useState(null);
@@ -11,6 +11,8 @@ export const Players = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [perPage, setPerPage] = useState(50);
     
+    const navigate = useNavigate();
+
     useEffect(() => {
         const endpoint = `/players?page=${currentPage}&per_page=${perPage}`;
     
@@ -20,8 +22,6 @@ export const Players = () => {
             setPlayers(filteredPlayers);
         });
     }, [currentPage, perPage]);
-
-    console.log(players);
 
     const feetToMeters = (height) => {
         const [feet, inches] = height.split('-').map(Number);
@@ -41,19 +41,23 @@ export const Players = () => {
         });
     }
 
+    const handlePlayerClick = (player) => {
+        navigate(`/player/${player.id}`, { state: { player } });
+    };
+
     return (
         <div className="player-table">
             <h2 className="title">Jugadores NBA</h2>
             <div className="filters">
-                <input type="text" placeholder="Filtrar por posición" value={positionFilter} onChange={(e) => setPositionFilter(e.target.value)} />
-                <input type="text" placeholder="Filtrar por equipo" value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} />
-                <input type="text" placeholder="Filtrar por año del draft" value={draftYearFilter} onChange={(e) => setDraftYearFilter(e.target.value)} />
+                <input type="text" className="filter-input" placeholder="Filtrar por posición" value={positionFilter} onChange={(e) => setPositionFilter(e.target.value)} />
+                <input type="text" className="filter-input" placeholder="Filtrar por equipo" value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} />
+                <input type="text" className="filter-input" placeholder="Filtrar por año del draft" value={draftYearFilter} onChange={(e) => setDraftYearFilter(e.target.value)} />
             </div>
             <div className="player-grid">
                 {filteredPlayers.map((player, index) => (
-                    <div key={index} className="player-card">
+                    <div key={index} className="player-card" onClick={() => handlePlayerClick(player)}>
                         <h5 className="player-name"> 
-                            <Link to={`/player/${player.id}`}>{`${player.first_name} ${player.last_name}`}</Link>
+                            {`${player.first_name} ${player.last_name}`}
                         </h5>
                         <div className="player-data">
                             <p><strong>Posición:</strong> {player.position}</p>

@@ -1,8 +1,43 @@
 .error-message {
-    background-color: #ffcccc;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 250px;
+    background-color: #eea5a5;
     color: #990000;
-    border: 1px solid #990000;
+    border: 1px solid var(--cyan-500);
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 50px auto 10px auto;
+}
+
+.player-average table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.player-average th,
+.player-average td {
+    border: 1px solid var(--cyan-600);
+    padding: 8px;
+}
+
+.player-average th {
+    background-color: var(--blue-400);
+    text-align: left;
+    font-weight: bold;
+}
+
+.player-average tr:nth-child(even) {
+    background-color: var(--indigo-100);
+}
+
+.player-average tr:hover {
+    background-color: #f1f1f1;
+}
+
+.player-average td {
+    text-align: left;
 }
