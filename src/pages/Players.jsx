@@ -8,21 +8,20 @@ export const Players = () => {
     const [positionFilter, setPositionFilter] = useState("");
     const [teamFilter, setTeamFilter] = useState("");
     const [draftYearFilter, setDraftYearFilter] = useState("");
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const [perPage, setPerPage] = useState(50);
+    
     useEffect(() => {
-        get("/players").then((data) => {
-            const sortedPlayers = data.data.sort((a, b) => {
-                if (a.position < b.position) {
-                    return -1;
-                }
-                if (a.position > b.position) {
-                    return 1;
-                }
-                return 0;
-            });
-            setPlayers(sortedPlayers);
+        const endpoint = `/players?page=${currentPage}&per_page=${perPage}`;
+    
+        get(endpoint).then((data) => {
+            const filteredPlayers = data.data.filter(player => player.draft_year);
+    
+            setPlayers(filteredPlayers);
         });
-    }, []);
+    }, [currentPage, perPage]);
+
+    console.log(players);
 
     const feetToMeters = (height) => {
         const [feet, inches] = height.split('-').map(Number);
@@ -62,8 +61,6 @@ export const Players = () => {
                             <p><strong>Camiseta:</strong> {player.jersey_number}</p>
                             <p><strong>Nacionalidad:</strong> {player.country}</p>
                             <p><strong>Draft Year:</strong> {player.draft_year}</p>
-                            <p><strong>Draft Round:</strong> {player.draft_round}</p>
-                            <p><strong>Draft Number:</strong> {player.draft_number}</p>
                         </div>
                         <div className="player-team">
                             <p><strong>Equipo:</strong> {player.team && player.team.full_name}</p>
