@@ -9,7 +9,7 @@ export const Players = () => {
     const [teamFilter, setTeamFilter] = useState("");
     const [draftYearFilter, setDraftYearFilter] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-    const [perPage, setPerPage] = useState(50);
+    const [perPage, setPerPage] = useState(75);
     
     const navigate = useNavigate();
 
