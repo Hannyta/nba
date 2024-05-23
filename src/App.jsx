@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Teams } from "./pages/Teams";
 import { TeamCard } from "./components/TeamCard";
 import { PlayerDetail } from "./components/PlayerDetail";
+import { GameList } from "./components/GameList";
 import { Navbar } from "./components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 
@@ -28,6 +29,7 @@ export const App = () => {
           <Route path="/teams/:teamId" element={<TeamCard />} />
           <Route path="/players" element={<Players />} />
           <Route path="/player/:playerId" element={<PlayerDetail />} />
+          <Route path="/games" element={<GameList />} />
         </Routes>
       </div>
     </BrowserRouter>
