@@ -1,0 +1,87 @@
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.pending-games-container {
+  width: 100%;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  border: 1px solid var(--blue-100);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--primary-color-text);
+  width: 100%;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team_score {
+  text-align: center;
+  font-weight: bold;
+  color: var(--blue-800);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vs {
+  font-size: 24px;
+}
+
+.date-time {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.button {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.team-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}

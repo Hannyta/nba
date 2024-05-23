@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 import { Teams } from "./pages/Teams";
 import { TeamCard } from "./components/TeamCard";
 import { PlayerDetail } from "./components/PlayerDetail";
-import { GameList } from "./components/GameList";
+import { GameList } from "./pages/GameList";
 import { Navbar } from "./components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 

@@ -29,18 +29,26 @@ export const PendingGames = () => {
     return (
         <div className="pending-games-container">
             <h2>Juegos Pendientes</h2>
-            <ul className="pending-games-list">
+            <div className="pending-games-list">
                 {pendingGames.map((game) => (
-                    <li key={game.id} className="pending-game-item">
+                    <div key={game.id} className="pending-game-item">
                         <div className="pending-game-details">
-                            <div className="pending-game-info">
-                                <p>{game.home_team.full_name} vs {game.visitor_team.full_name}</p>
-                                <p className="datetime">{new Date(game.date).toLocaleString()}</p>
+                            <div className="team-info">
+                                <img className="team-logo" src={`/assets/logoTeams/${game.home_team.name}.png`} alt="logo"/>
+                                <p className="team-name">{game.home_team.full_name}</p>
+                            </div>
+                            <p>Vs.</p>
+                            <div className="team-info">
+                                <img className="team-logo" src={`/assets/logoTeams/${game.visitor_team.name}.png`} alt="logo"/>
+                                <p className="team-name">{game.visitor_team.full_name}</p>
+                            </div>
+                            <div className="game-info">
+                                <p className=".datetime">{new Date(game.date).toLocaleDateString()}, {new Date(game.date).toLocaleTimeString()}</p>
                             </div>
                         </div>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
