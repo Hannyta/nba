@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { get } from "../utils/conexionAPI";
 import "./Player.css"
@@ -10,18 +10,30 @@ export const Players = () => {
     const [draftYearFilter, setDraftYearFilter] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const [perPage, setPerPage] = useState(75);
-    
+    const [topPlayers, setTopPlayers] = useState([]);
+
     const navigate = useNavigate();
 
     useEffect(() => {
         const endpoint = `/players?page=${currentPage}&per_page=${perPage}`;
-    
+
         get(endpoint).then((data) => {
             const filteredPlayers = data.data.filter(player => player.draft_year);
-    
+
             setPlayers(filteredPlayers);
         });
     }, [currentPage, perPage]);
+
+    useEffect(() => {
+        get('/stats?seasons[]=2023')
+            .then(data => {
+                console.log("Estadísticas de los mejores jugadores:", data);
+                const sortedPlayers = data.data.sort((a, b) => b.pts - a.pts);
+                const topPlayers = sortedPlayers.slice(0, 10);
+                setTopPlayers(topPlayers);
+            })
+            .catch(error => console.error('Hubo un error al obtener las estadísticas de los mejores jugadores:', error));
+    }, []);
 
     const feetToMeters = (height) => {
         const [feet, inches] = height.split('-').map(Number);
@@ -46,7 +58,7 @@ export const Players = () => {
     };
 
     return (
-        <div className="player-table">
+        <div className="players-page">
             <h2 className="title">Jugadores NBA</h2>
             <div className="filters">
                 <input type="text" className="filter-input" placeholder="Filtrar por posición" value={positionFilter} onChange={(e) => setPositionFilter(e.target.value)} />

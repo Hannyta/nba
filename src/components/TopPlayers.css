@@ -1,0 +1,79 @@
+.top-player {
+  background-color: var(--blue-50);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease; /
+}
+
+.top-player:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.top-player h3 {
+  color: var(--blue-900);
+}
+
+.top-player table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.top-player th,
+.top-player td {
+  border: 1px solid var(--cyan-600);
+  padding: 8px;
+}
+
+.top-player th {
+  background-color: var(--blue-800);
+  text-align: left;
+  font-weight: bold;
+  text-align: center;
+  color: var(--blue-50);
+  font-weight: bold;
+}
+
+.top-player tr:nth-child(even) {
+  background-color: var(--indigo-100);
+}
+
+.top-player tr:hover {
+  background-color: #f1f1f1;
+}
+
+.top-player td {
+  text-align: left;
+}
+
+.top-player tbody {
+  transition: transform 0.3s ease;
+}
+
+.top-player:hover tbody {
+  transform: translateY(10px);
+}
+
+.dark .top-player {
+  background-color: var(--blue-1100);
+}
+
+.dark .top-player tr{
+  background-color: var(--indigo-800);
+}
+
+.dark .top-player h3 {
+  color: var(--blue-300);
+}
+
+.dark .top-player th {
+  background-color: var(--blue-1000);
+  color: var(--blue-300);
+}

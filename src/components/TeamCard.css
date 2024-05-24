@@ -4,8 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: url('/assets/Ba/fondo.png') no-repeat center center / cover;
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8) url('/assets/Ba/fondo.png') no-repeat center center / cover;
 }
 
 .CardTeam {

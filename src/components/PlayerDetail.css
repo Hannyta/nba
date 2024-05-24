@@ -1,21 +1,35 @@
+.player-card {
+    background-color: var(--blue-50);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
 .error-message {
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    width: 250px;
+    width: 500px;
     background-color: #eea5a5;
     color: #990000;
     border: 1px solid var(--cyan-500);
     padding: 10px;
     border-radius: 5px;
     margin: 50px auto 10px auto;
+    font-weight: bold;
+}
+
+.error-message img {
+    max-width: 200px;
+    margin-right: 10px;
 }
 
 .player-average table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .player-average th,
@@ -40,4 +54,16 @@
 
 .player-average td {
     text-align: left;
+}
+
+.dark h3 {
+    color: var(--blue-400);
+}
+
+.dark .error-message {
+    background-color: var(--blue-1100);
+}
+
+.dark .player-average td {
+    background-color: var(--indigo-100);
 }

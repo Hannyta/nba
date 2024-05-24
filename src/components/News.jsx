@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./News.css"; // Importa tu archivo CSS de estilos
+import "./News.css"; 
 
 export const News = () => {
     const [news, setNews] = useState([]);
@@ -26,14 +26,14 @@ export const News = () => {
     ));
 
     return (
-        <div className="news-container"> {/* Agrega una clase para el contenedor */}
+        <div className="news-container"> 
             {nbaNews.map((article, index) => (
-                <div key={index} className="news-card"> {/* Agrega una clase para cada tarjeta de noticia */}
-                    <img src={article.urlToImage} alt="News" className="news-image" /> {/* Agrega una clase para la imagen */}
-                    <div className="news-content"> {/* Agrega una clase para el contenido */}
+                <div key={index} className="news-card"> 
+                    <img src={article.urlToImage} alt="News" className="news-image" /> 
+                    <div className="news-content"> 
                         <h2>{article.title}</h2>
                         <p>{article.description}</p>
-                        <a href={article.url} target="_blank" rel="noopener noreferrer" className="read-more">Leer más</a> {/* Agrega una clase para el enlace */}
+                        <a href={article.url} target="_blank" rel="noopener noreferrer" className="read-more">Leer más</a> 
                     </div>
                 </div>
             ))}

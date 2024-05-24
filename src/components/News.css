@@ -14,6 +14,7 @@
 }
 
 .news-image {
+    margin-top: 10px;
     width: 50%;
     height: auto;
     border-radius: 10px 10px 0 0;
@@ -42,4 +43,12 @@
     color: #007bff;
     text-decoration: none;
     margin-top: 10px;
+}
+
+.dark .news-card {
+    background-color: var(--dark-0);
+}
+
+.read-more {
+    color: var(--blue-1100)
 }
