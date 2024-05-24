@@ -1,10 +1,10 @@
 .team-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid var(--blue-200);
-    border-radius: 5px;
-    background-color: var(--yellow-50);
-  }
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--blue-200);
+  border-radius: 5px;
+  background-color: var(--yellow-50);
+}
 
 .title {
   margin: 26px;

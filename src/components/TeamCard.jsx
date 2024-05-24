@@ -2,7 +2,7 @@ import { get } from "../utils/conexionAPI";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PlayerCard } from "./PlayersCard";
-
+import fondo from "/assets/Ba/fondo.png";
 import "./TeamCard.css";
 
 export const TeamCard = () => {
@@ -38,7 +38,7 @@ export const TeamCard = () => {
     }
     
     return (
-        <div className="container" style={{ backgroundImage: `url(/assets/backgrounds/${team.name}-background.jpg)` }}>
+        <div className="container" style ={{ backgroundImage: `url(${fondo})` }}>
             <div className="CardTeam">
                 <img src={`/assets/logoTeams/${team.name}.png`} alt="logo" />
                 <h2>{team.full_name}</h2>
@@ -53,4 +53,4 @@ export const TeamCard = () => {
             </div>
         </div>
     );
-}; 
+};
