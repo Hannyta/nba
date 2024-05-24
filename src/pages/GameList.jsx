@@ -30,7 +30,7 @@ export const GameList = () => {
     if (error) return <p>Error al cargar los juegos: {error.message}</p>;
 
     return (
-        <div className="container">
+        <div className="container_GameList">
             <div className="sidebar">
                 <PendingGames />
             </div>

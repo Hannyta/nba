@@ -7,16 +7,16 @@ import "./TeamCard.css";
 
 export const TeamCard = () => {
 
-    const [team, setTeam ] = useState(null);
+    const [team, setTeam] = useState(null);
     const [players, setPlayers] = useState(null);
     const [thisTeam, setThisTeam] = useState(null);
     const { teamId } = useParams();
 
     useEffect(() => {
-            get("/teams").then((data) => {
-                const allTeamsData = data.data;
-                setThisTeam(allTeamsData.find(el => el.id === parseInt(teamId)));
-            });
+        get("/teams").then((data) => {
+            const allTeamsData = data.data;
+            setThisTeam(allTeamsData.find(el => el.id === parseInt(teamId)));
+        });
     }, [teamId]);
 
     useEffect(() => {
@@ -24,7 +24,6 @@ export const TeamCard = () => {
         .then((data) => {
             setTeam(data.data);
         });
-       
     }, [teamId]);
 
     useEffect(() => {
@@ -32,21 +31,19 @@ export const TeamCard = () => {
         .then((data) => {
             setPlayers(data.data);
         });
-        
     }, [teamId]);
-   
 
     if (!team) {
         return <div>Team not found.</div>;
     }
     
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundImage: `url(/assets/backgrounds/${team.name}-background.jpg)` }}>
             <div className="CardTeam">
-                <img src={`/assets/logoTeams/${team.name}.png`} alt="logo"/>
+                <img src={`/assets/logoTeams/${team.name}.png`} alt="logo" />
                 <h2>{team.full_name}</h2>
-                <p><strong>City:</strong> {team.city}</p>
-                <p><strong>Conference:</strong> {team.conference}</p>
+                <p><strong>Ciudad:</strong> {team.city}</p>
+                <p><strong>Conferencia:</strong> {team.conference}</p>
                 <p><strong>Division:</strong> {team.division}</p>
             </div>
             <div className="players">
@@ -56,4 +53,4 @@ export const TeamCard = () => {
             </div>
         </div>
     );
-};
+}; 

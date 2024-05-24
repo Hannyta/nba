@@ -1,0 +1,18 @@
+h1 {
+    margin: 20px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.pending-games {
+    width: 30%;
+    padding: 20px;
+}
+
+.news {
+    width: 70%;
+    padding: 20px;
+}

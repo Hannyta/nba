@@ -1,34 +1,34 @@
 .player-card {
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid var(--blue-200);
-  border-radius: 5px;
-  margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .player-name {
-    font-size: 1.2rem;
-    color: var(--blue-1000);
-    margin-bottom: 10px;
-    justify-content: center;
-    align-content: center;
+    margin: 0;
+    font-size: 1.2em;
+    color: #333333;
+    text-align: center;
 }
 
-.Ptexto {
-    margin: 5px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-    color: var(--blue-1000);
+.player-info {
+    margin-top: 10px;
 }
 
-.dark .player-name{
-    color: var(--blue-200);
+.player-info-item {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #666666;
 }
 
-.dark .PTexto {
-    color: var(--blue-200);
+.dark .player-card {
+    background-color: var(--blue-1100);
 }

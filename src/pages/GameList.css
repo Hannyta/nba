@@ -1,4 +1,4 @@
-.container {
+.container_GameList {
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -84,4 +84,8 @@
   width: 60px;
   height: auto;
   margin-bottom: 10px;
+}
+
+.dark .game-card {
+  background-color: var(--blue-1100);
 }
